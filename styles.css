@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+}
+
+.logo {
+    font-size: 24px;
+    color: #8A2BE2;
+    font-family: "roboto";
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-toggle {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Main Section */
+.intro {
+    text-align: center;
+    margin: 100px 20px;
+}
+
+.intro h1 {
+    font-size: 3rem;
+}
+
+.highlight {
+    color: #8A2BE2;
+}
+
+.intro button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8A2BE2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+}
+
+.skills-cloud {
+    margin-top: 20px;
+}
+
+.skills-cloud span {
+   font-family: "roboto";
+   font-weight: 400;
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.2rem;
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8A2BE2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.project-gallery {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #8A2BE2;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #121212;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links-visible {
+        display: flex; /* Display menu when toggled */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button */
+    }
+
+    .intro h1 {
+        font-size: 2rem; /* Adjust for smaller screens */
+    }
+
+    .skills-cloud span {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .project-gallery {
+        flex-direction: column; /* Stack projects vertically */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h1 {
+        font-size: 1.5rem; /* Further adjustment for very small screens */
+    }
+
+    .intro p, .skills p, .projects h2, .contact h2 {
+        font-size: 1rem;
+    }
+
+    .intro button, .projects button, .contact button {
+        width: 100%;
+        padding: 15px;
+    }
+}
